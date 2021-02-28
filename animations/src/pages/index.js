@@ -1,9 +1,9 @@
-
+import StoreList from './StoreList';
 export default function Home() {
   return (
     <div>
    
-    home
+    <StoreList/>
  
     </div>
 
