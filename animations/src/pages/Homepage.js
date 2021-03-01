@@ -1,4 +1,4 @@
-import StoreList from './StoreList';
+import StoreList from '../components/StoreList';
 
 export default function Homepage() {
   return (
