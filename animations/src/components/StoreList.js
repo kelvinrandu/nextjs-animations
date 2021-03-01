@@ -1,12 +1,7 @@
 import Link from 'next/link';
 
-const stores =[
-  {name: 'cyberplus', email: 'cyberplus@diani' , location: 'diani'  },
-  {name: 'cyberplus', email: 'cyberplus@likoni' , location: 'likoni'  },
-  {name: 'cyberplus', email: 'cyberplus@msambweni' , location: 'msambweni'  },
-  {name: 'cyberplus', email: 'cyberplus@tiwi' , location: 'tiwi'  }
-]
-export default function Stores() {
+
+export default function Stores({stores}) {
 
     
     return (
@@ -27,5 +22,8 @@ export default function Stores() {
    
       </div>
     )
+  }
+  export async function getStaticProps({ params }) {
+    // Fetch necessary data for the blog post using params.id
   }
   
