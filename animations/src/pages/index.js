@@ -1,9 +1,9 @@
-import StoreList from './StoreList';
+import Login from '../components/user/login';
 export default function Home() {
   return (
     <div>
    
-    <StoreList/>
+    <Login/>
  
     </div>
 
