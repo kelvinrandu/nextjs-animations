@@ -1,6 +1,6 @@
 
-import { GetStaticProps } from 'next';
-import { InferGetStaticPropsType } from 'next';
+// import { GetStaticProps } from 'next';
+// import { InferGetStaticPropsType } from 'next';
 
 
 
