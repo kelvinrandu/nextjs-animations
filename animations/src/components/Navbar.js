@@ -1,24 +1,34 @@
 import Search from "./Search";
 import UserName from "./user/UserName";
 import Link from 'next/link';
+import { Container } from "@chakra-ui/react";
+import { Box, Flex, Stack, Grid, Wrap, AspectRatio, Spacer } from "@chakra-ui/layout";
+import { Button } from "@chakra-ui/button";
 
 export default function Navbar() {
 
     
     return (
       <div>
-      <ul className="navbar"> 
-      <li>
-      <Link href="/">
-        <a>
+       <Container maxW="container.lg" centerContent >
+       <Flex>
+         <Box p="2">
+         <Link href="/">
           <UserName /> 
-        </a>
-         </Link>
-      </li>   
-      <li><Search /></li>
-      <li><h6>colormode</h6></li>
-      </ul>
-      </div>
+         </Link> 
+         </Box>
+         <Spacer/>
+        <Box>
+          <Search />
+        </Box>
+        <Spacer/>
+      <Button colorScheme="teal" >colormode</Button>
+     
+       </Flex>
+   
+     </Container>
+      
+       </div>
     )
   }
   
