@@ -9,8 +9,8 @@ export default function Navbar() {
     
     return (
       <div>
-       <Container maxW="container.lg" centerContent >
-       <Flex>
+       <Container maxW="container.lg">
+       <Flex alignItems="center">
          <Box p="2">
          <Link href="/">
           <UserName /> 
