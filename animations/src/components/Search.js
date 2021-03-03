@@ -1,9 +1,21 @@
+
+import {
+    Input,
+    InputGroup,
+    InputAddon,
+    InputLeftAddon,
+    InputRightAddon,
+    InputElement,
+    InputLeftElement,
+    InputRightElement,
+  } from "@chakra-ui/input"
+
 export default function Search() {
 
     
     return (
       <div>    
-   <h6>Search</h6>
+        <Input placeholder="search" />
       </div>
     )
   }

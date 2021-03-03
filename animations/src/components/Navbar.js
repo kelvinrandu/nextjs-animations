@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { Container } from "@chakra-ui/react";
 import { Box, Flex, Stack, Grid, Wrap, AspectRatio, Spacer } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/button";
-
 export default function Navbar() {
 
     
@@ -22,6 +21,7 @@ export default function Navbar() {
           <Search />
         </Box>
         <Spacer/>
+        
       <Button colorScheme="teal" >colormode</Button>
      
        </Flex>

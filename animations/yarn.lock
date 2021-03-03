@@ -299,7 +299,7 @@
     "@chakra-ui/hooks" "1.1.4"
     "@chakra-ui/utils" "1.2.0"
 
-"@chakra-ui/input@1.1.2":
+"@chakra-ui/input@1.1.2", "@chakra-ui/input@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/input/-/input-1.1.2.tgz#8d1b1734870168802a4d4c679f9bf0fb7b4bc716"
   integrity sha512-ipT5RpkwVTTzadvOEXt62m9a7Q3vH0cZf1Dis3xdh2FBJjR1Xk0Nr+jjXxtTj99Rn6UMxsVyq3EsSnH09O8o5A==
@@ -569,7 +569,7 @@
     "@chakra-ui/icon" "1.1.1"
     "@chakra-ui/utils" "1.2.0"
 
-"@chakra-ui/textarea@1.1.1":
+"@chakra-ui/textarea@1.1.1", "@chakra-ui/textarea@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@chakra-ui/textarea/-/textarea-1.1.1.tgz#d4c5274a79fbbae55eba0a3d3173429e72bd0e83"
   integrity sha512-Mmw/mVfZSNf/0QpLe8Nnvpp1jAkRtjhKD4eDBG6AW6M0l6tST3LFbDC3qZePmEJpqxkOE3IyQgYEjHjb9PgcMA==
