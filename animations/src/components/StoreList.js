@@ -1,6 +1,5 @@
 
-// import { GetStaticProps } from 'next';
-// import { InferGetStaticPropsType } from 'next';
+import { Box, Flex, Stack, Grid, Wrap, AspectRatio } from "@chakra-ui/layout";
 
 
 
@@ -8,6 +7,8 @@ const stores = [
   {id:1,name:'ukunda',location:'diani',owner:'Musa',type:'cafe'},
   {id:2,name:'konahamsa',location:'diani',owner:'Musaka',type:'cafe'},
   {id:3,name:'ukunda and sons',location:'diani',owner:'Maria',type:'shop'},
+  {id:4,name:'ukunda',location:'diani',owner:'Husein',type:'hotel'},
+  {id:4,name:'ukunda',location:'diani',owner:'Husein',type:'hotel'},
   {id:4,name:'ukunda',location:'diani',owner:'Husein',type:'hotel'}
 ];
 
@@ -19,7 +20,25 @@ const stores = [
     <div>
         {stores.map(({id, name, location, email}) => (
           <div key={id}>
-           <h1>{name}</h1>
+            <Box 
+            d="flex"
+            alignItems="center"
+            justifyContent="center"
+            w="25vw"
+            h="6vh"
+            borderWidth="2px"
+            fontSize="xs"
+            textTransform="uppercase"
+            font-weight="semi-bold"
+            borderRadius="md"
+            margin="auto"
+            overflow="hidden"
+            letterSpacing="wide"
+
+            >
+            {name}
+            </Box>
+        
           </div>
         
         ))}

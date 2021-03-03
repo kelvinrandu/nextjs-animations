@@ -15,7 +15,7 @@ export default function Search() {
     
     return (
       <div>    
-        <Input placeholder="search" />
+        <Input placeholder="search" w="15vw" h="3vh"/>
       </div>
     )
   }
