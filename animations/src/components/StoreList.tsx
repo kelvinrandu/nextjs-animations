@@ -10,7 +10,7 @@ export default function Stores() {
     {name: 'cyberplus', email:'cyberplusmsambweni@gmail.com' , location: 'msambweni', created: 'diani'  }
  
   ]
-    
+
     return (
       <div>
         {stores.map(e =>(

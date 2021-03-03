@@ -1,7 +1,7 @@
 import useSWR from "swr";
 
 const fetcher = url => fetch(url).then(res => res.json())
-const baseUrl = "https://jsonplaceholder.typicode.com"
+const baseUrl = "http://localhost:5000"
 
 export const useGetPosts = path => {
   if (!path) {
