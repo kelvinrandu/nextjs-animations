@@ -14,8 +14,9 @@ export default function Search() {
 
     
     return (
-      <div>    
-        <Input placeholder="search" w="15vw" h="3vh"/>
+      <div>   
+         
+        <Input placeholder="search" w="20vw" h="5vh" borderRadius=".3em"/>
       </div>
     )
   }

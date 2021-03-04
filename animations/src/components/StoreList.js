@@ -31,7 +31,7 @@ const stores = [
             textTransform="uppercase"
             font-weight="semi-bold"
             borderRadius="md"
-            margin="auto"
+            mb="10px"
             overflow="hidden"
             letterSpacing="wide"
 

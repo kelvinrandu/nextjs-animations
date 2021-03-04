@@ -8,7 +8,7 @@ export default function Homepage() {
   return (
     <div>
     <Navbar />
-    <Center h="60vh">
+    <Center h="100vh" w="100vw">
     <StoreList/>
     </Center>
     
