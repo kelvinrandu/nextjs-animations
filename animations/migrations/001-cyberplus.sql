@@ -30,7 +30,17 @@ CREATE TABLE Items(
     updated_at TIMESTAMP
 
 );
+CREATE TABLE Sales(
+    id INTEGER PRIMARY KEY AUTOINCRIMENT ,
+    serial TEXT,
+    store_id INTEGER REFERENCES Stores(id),
+    total_price TEXT,
+    created_at TIMESTAMP,
+    updated_at TIMESTAMP
+
+);
 -- Down
 DROP TABLE Users;
 DROP TABLE Stores;
 DROP TABLE Items;
+DROP TABLE Sales;
