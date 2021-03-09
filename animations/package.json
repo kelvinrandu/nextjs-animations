@@ -8,15 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.11",
+    "@prisma/client": "^2.18.0",
     "framer-motion": "^3.7.0",
-    "graphql": "^15.5.0",
-    "json-server": "^0.16.3",
-    "next": "10.0.7",
-    "next-auth": "^3.7.0",
+    "next": "^10.0.7",
+    "next-auth": "latest",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "sqlite3": "^5.0.2",
     "swr": "^0.4.2"
   },
   "devDependencies": {

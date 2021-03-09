@@ -1,14 +1,13 @@
 import StoreList from '../components/StoreList';
-import { useGetPosts } from "../../useRequest";
 
 
 export default function Homepage() {
   
-  const { posts, error } = useGetPosts("/stores")
+  // const { posts, error } = useGetPosts("/stores")
 
-  if (error) return <h1>Something went wrong!</h1>
-  if (!posts) return <h1>Loading...</h1>
-  console.log(posts[0].name)
+  // if (error) return <h1>Something went wrong!</h1>
+  // if (!posts) return <h1>Loading...</h1>
+  // console.log(posts[0].name)
  
 
   return (
