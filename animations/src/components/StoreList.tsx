@@ -30,7 +30,5 @@ export default function Stores() {
       </div>
     )
   }
-  export async function getStaticProps({ params }) {
-    // Fetch necessary data for the blog post using params.id
-  }
+
   
