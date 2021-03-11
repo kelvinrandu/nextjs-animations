@@ -18,7 +18,7 @@ model User {
   name    String?
   phone      String
   role    Role     @default(USER)
-  stores   Post[]
+  stores   Store[]
 }
 
 model Session {
@@ -32,16 +32,16 @@ model Store {
   id         Int         @id @default(autoincrement())
   name     String
   createdAt  DateTime    @default(now())
-  title      String
-  published  Boolean     @default(false)
   author     User        @relation(fields: [authorId], references: [id])
   authorId   Int
-  categories Category[]  @relation(references: [id])
+  sales   Sale[]
 }
-model Category {
+model Sale {
   id    Int     @id @default(autoincrement())
   name  String
-  posts Post[]  @relation(references: [id])
+  store    Store        @relation(fields: [storeId], references: [id])
+  storeId   Int
+  
 }
 enum Role {
   USER
