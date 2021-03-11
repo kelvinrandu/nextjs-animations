@@ -1,0 +1,27 @@
+ {
+     "stores": [
+       {
+         "id": 1,
+         "name": "Ukunda n sons",
+         "location": "Diani",
+         "email": "ukundansons@email.com"
+       },
+     {
+       "id": 2,
+         "name": "Ukunda mall",
+         "location": "Diani",
+         "email": "ukundansons@email.com"
+       },
+    {
+         "id": 3,
+         "name": "diani shop",
+         "location": "Diani",
+      "email": "ukundansons@email.com"
+ },
+{
+        "id": 4,
+           "name": "yyy and sons",
+           "location": "Diani",
+       "email": "ukundansons@email.com"
+  }
+  ]}
