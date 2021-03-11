@@ -14,9 +14,15 @@ const options = {
 
 
   ],
+  debug: process.env.NODE_ENV === 'development',
+  secret: process.env.AUTH_SECRET,
+  jwt:{
+    secret: process.env.JWT_SECRET,
 
-  // A database is optional, but required to persist accounts in a database
-  database: process.env.DATABASE_URL,
+  }
+
+  // link to database
+ // database: process.env.DATABASE_URL,
 };
 
 export default (req, res) => NextAuth(req, res, options);
