@@ -1,22 +1,27 @@
+ {
+     "stores": [
+       {
+         "id": 1,
+         "name": "Ukunda n sons",
+         "location": "Diani",
+         "email": "ukundansons@email.com"
+       },
+     {
+       "id": 2,
+         "name": "Ukunda mall",
+         "location": "Diani",
+         "email": "ukundansons@email.com"
+       },
+    {
+         "id": 3,
+         "name": "diani shop",
+         "location": "Diani",
+      "email": "ukundansons@email.com"
+ },
 {
-    "users": [
-      {
-        "id": 1,
-        "first_name": "Sebastian",
-        "last_name": "Eschweiler",
-        "email": "sebastian@codingthesmartway.com"
-      },
-      {
-        "id": 2,
-        "first_name": "Steve",
-        "last_name": "Palmer",
-        "email": "steve@codingthesmartway.com"
-      },
-      {
-        "id": 3,
-        "first_name": "Ann",
-        "last_name": "Smith",
-        "email": "ann@codingthesmartway.com"
-      }
-    ]
+        "id": 4,
+           "name": "yyy and sons",
+           "location": "Diani",
+       "email": "ukundansons@email.com"
   }
+  ]}
