@@ -41,7 +41,7 @@ model Sale {
   name  String
   store    Store        @relation(fields: [storeId], references: [id])
   storeId   Int
-  stores Store[]  @relation(references: [id])
+  
 }
 enum Role {
   USER
