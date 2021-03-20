@@ -1,7 +1,10 @@
 
-import NextAuth from 'next-auth';
-import Providers from 'next-auth/providers';
+import NextAuth from 'next-auth'
+import Providers from 'next-auth/providers'
+import Adapters from 'next-auth/adapters'
+import { PrismaClient } from '@prisma/client'
 
+const prisma = new PrismaClient()
 const options = {
   site: process.env.SITE || 'http://localhost:3000',
 
@@ -21,13 +24,12 @@ const options = {
   ],
   debug: process.env.NODE_ENV === 'development',
   secret: process.env.AUTH_SECRET,
+  adapter: Adapters.Prisma.Adapter({ prisma }),
   jwt:{
     secret: process.env.JWT_SECRET,
 
   }
 
-  // link to database
- // database: process.env.DATABASE_URL,
 };
 
 export default (req, res) => NextAuth(req, res, options);
