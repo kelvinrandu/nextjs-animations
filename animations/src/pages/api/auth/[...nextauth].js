@@ -10,10 +10,6 @@ const options = {
 
   // Configure one or more authentication providers
   providers: [
-    Providers.LinkedIn({
-      clientId: process.env.LINKEDIN_CLIENT_ID,
-      clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
-    }),
 
     Providers.GitHub({
       clientId: process.env.GITHUB_CLIENT_ID,

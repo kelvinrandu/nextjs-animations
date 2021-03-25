@@ -1,6 +1,7 @@
 import {
   useSession, signIn, signOut
 } from 'next-auth/client'
+import StoreList from '../components/StoreList';
 
 export default function Component() {
   const [ session, loading ] = useSession()
