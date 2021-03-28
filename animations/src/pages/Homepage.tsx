@@ -1,7 +1,31 @@
-import StoreList from '../components/StoreList';
+import StoreList from '../components/StoreList'
+// import { PrismaClient } from '@prisma/client'
+import prisma from '../../lib/prisma'
 
+
+export async function getStaticProps() {
+
+  // Returns an object or null
+  const getUser: object | null = await prisma.store.findMany({
+ 
+    select: {
+      id:true,
+      name:true,
+ 
+    },
+  })
+ 
+  console.log(getUser)
+  
+
+  return {
+    props : { getUser}
+  }
+  
+}
 
 export default function Homepage() {
+
   
   // const { posts, error } = useGetPosts("/stores")
 

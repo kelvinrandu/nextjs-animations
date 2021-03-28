@@ -3,8 +3,9 @@ import { PrismaClient } from '@prisma/client'
 
 export default function getAllStores(req: NextApiRequest, res: NextApiResponse){
     const prisma = new PrismaClient();
+    
   
-    res.json({hello: 'world', message: 'all items lies here'});
+    res.json({hello: 'world', message: 'all items lies here' + stores});
     // try{
     //     const users = await prisma.users()
     // } catch(e){
