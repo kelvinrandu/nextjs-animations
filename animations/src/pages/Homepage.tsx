@@ -6,7 +6,7 @@ import prisma from '../../lib/prisma'
 export async function getStaticProps() {
 
   // Returns an object or null
-  const getUser: object | null = await prisma.store.findMany({
+  const stores: object | null = await prisma.store.findMany({
  
     select: {
       id:true,
@@ -14,30 +14,28 @@ export async function getStaticProps() {
  
     },
   })
- 
-  console.log(getUser)
   
 
   return {
-    props : { getUser}
+    props : { stores}
   }
   
 }
 
-export default function Homepage() {
+export default function Homepage(props) {
 
-  
-  // const { posts, error } = useGetPosts("/stores")
 
-  // if (error) return <h1>Something went wrong!</h1>
-  // if (!posts) return <h1>Loading...</h1>
-  // console.log(posts[0].name)
  
 
   return (
     <div className="container">
       <h1>My stores</h1>
-    <StoreList/>
+      {props.stores.map((store) => (
+    <div key={store.id} className="post">
+      {store.name}
+    </div>
+  ))}
+  
  
     </div>
 
