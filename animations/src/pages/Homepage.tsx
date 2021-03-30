@@ -1,5 +1,4 @@
 import StoreList from '../components/StoreList'
-// import { PrismaClient } from '@prisma/client'
 import prisma from '../../lib/prisma'
 
 
@@ -7,6 +6,9 @@ export async function getStaticProps() {
 
   // Returns an object or null
   const stores: object | null = await prisma.store.findMany({
+    where: {
+      author: { email: 'randukelvin@gmail.com' },
+    }, 
  
     select: {
       id:true,
@@ -15,7 +17,6 @@ export async function getStaticProps() {
     },
   })
   
-
   return {
     props : { stores}
   }
