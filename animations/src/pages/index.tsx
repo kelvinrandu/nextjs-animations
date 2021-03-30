@@ -10,7 +10,7 @@ export default function Component() {
       Signed in as {session.user.email} <br/>
       <div className="container">
       <h1>My stores</h1>
-    <StoreList/>
+    
  
     </div>
       <button onClick={() => signOut()}>Sign out</button>

@@ -30,11 +30,8 @@ export default function Homepage(props) {
   return (
     <div className="container">
       <h1>My stores</h1>
-      {props.stores.map((store) => (
-    <div key={store.id} className="post">
-      {store.name}
-    </div>
-  ))}
+      <StoreList stores={props.stores} />
+
   
  
     </div>

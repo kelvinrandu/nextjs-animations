@@ -8,6 +8,7 @@ export default function Stores({stores}) {
 
     return (
       <div>
+        stores 
         {stores.map(e =>(
 
           <Link as={`/stores/${e.name}`} href="/stores/[id]">
@@ -18,9 +19,7 @@ export default function Stores({stores}) {
             </ul>
           </Link>
 
-        ))}
-
-      
+          ))}
    
       </div>
     )
