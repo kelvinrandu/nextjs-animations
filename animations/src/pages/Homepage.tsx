@@ -1,19 +1,39 @@
-import StoreList from '../components/StoreList';
+import StoreList from '../components/StoreList'
+import prisma from '../../lib/prisma'
 
 
-export default function Homepage() {
+export async function getStaticProps() {
+
+  // Returns an object or null
+  const stores: object | null = await prisma.store.findMany({
+    where: {
+      author: { email: 'randukelvin@gmail.com' },
+    }, 
+ 
+    select: {
+      id:true,
+      name:true,
+ 
+    },
+  })
   
-  // const { posts, error } = useGetPosts("/stores")
+  return {
+    props : { stores}
+  }
+  
+}
 
-  // if (error) return <h1>Something went wrong!</h1>
-  // if (!posts) return <h1>Loading...</h1>
-  // console.log(posts[0].name)
+export default function Homepage(props) {
+
+
  
 
   return (
     <div className="container">
       <h1>My stores</h1>
-    <StoreList/>
+      <StoreList stores={props.stores} />
+
+  
  
     </div>
 
