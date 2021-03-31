@@ -1,6 +1,15 @@
 import { NextApiRequest, NextApiResponse} from 'next';
+import prisma from '../../../../lib/prisma'
 
-export default function getStoreById(req: NextApiRequest, res: NextApiResponse){
-    res.json({byId: req.query.id, message: 'store details lies here'});
+export default async function getStoreById(req: NextApiRequest, res: NextApiResponse){
+ 
+    const id = req.query.id
+    const store = await prisma.store.findUnique({
+        where: {
+          id: Number(id) ,
+        },
+      })
+
+    res.json(store);
 
 }

@@ -1,20 +1,20 @@
-import { NextApiRequest, NextApiResponse} from 'next'
-import { PrismaClient } from '@prisma/client'
+import { NextApiRequest, NextApiResponse} from 'next';
+import prisma from '../../../lib/prisma'
 
-export default function getAllStores(req: NextApiRequest, res: NextApiResponse){
-    const prisma = new PrismaClient();
+export default async function getAllStores(req: NextApiRequest, res: NextApiResponse){
+    const stores: object | null = await prisma.store.findMany({
+        where: {
+          author: { email: 'randukelvin@gmail.com' },
+        }, 
+     
+        select: {
+          id:true,
+          name:true,
+     
+        },
+      })
+
+      res.json(stores)
     
-  
-    res.json({hello: 'world', message: 'all items lies here' + stores});
-    // try{
-    //     const users = await prisma.users()
-    // } catch(e){
-    //     res.status(500);
-    //     res.json({stores});
-
-    // } finally{ 
-
-    //     await prisma.disconnect();
-    // }
 
 }
