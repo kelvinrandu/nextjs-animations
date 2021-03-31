@@ -1,23 +1,39 @@
-import {
-  useSession, signIn, signOut
-} from 'next-auth/client'
+// import {
+//   useSession, signIn, signOut
+// } from 'next-auth/client'
 import StoreList from '../components/StoreList';
+import prisma from '../../lib/prisma'
 
-export default function Component() {
-  const [ session, loading ] = useSession()
-  if(session) {
-    return <>
-      Signed in as {session.user.email} <br/>
-      <div className="container">
-      <h1>My stores</h1>
-    
+
+export async function getStaticProps() {
+
+  // Returns an object or null
+  const stores: object | null = await prisma.store.findMany({
+    where: {
+      author: { email: 'randukelvin@gmail.com' },
+    }, 
  
-    </div>
-      <button onClick={() => signOut()}>Sign out</button>
-    </>
+    select: {
+      id:true,
+      name:true,
+ 
+    },
+  })
+  
+  return {
+    props : { stores}
   }
-  return <>
-    Not signed in <br/>
-    <button onClick={() => signIn()}>Sign in</button>
-  </>
+  
 }
+export default function Component(props) {
+  
+  return (
+    <div className="container">
+      <h1>My stores</h1>
+      <StoreList stores={props.stores} />
+
+    </div>
+
+  )
+}
+
