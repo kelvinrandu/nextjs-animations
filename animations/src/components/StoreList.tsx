@@ -1,28 +1,36 @@
-import { getDomainLocale } from 'next/dist/next-server/lib/router/router';
-import Link from 'next/link';
+import { Box, Stack,Heading,Text } from "@chakra-ui/layout"
+import Link from 'next/link'
 
+function Feature({ name, location, ...rest }) {
+  return (
+    <Box p={5} shadow="md" borderWidth="1px" w="50%"  {...rest}>
+      <Heading fontSize="xl">{name}</Heading>
+      <Text mt={4}>{location} </Text>
+    </Box>
+  )
+}
 
+export default function StoreList({stores}) {
+  return (
+    <Stack spacing={8}  >
 
-export default function Stores({stores}) {
-
-
-    return (
-      <div>
-        stores 
         {stores.map(e =>(
 
           <Link as={`/stores/${e.name}`} href="/stores/[id]">
-            <ul>
+            
             <a>
-            {e.name} {e.location}
+
+            <Feature
+              name={e.name}
+              location="Diani"
+            />
+          
             </a>
-            </ul>
+            
           </Link>
 
-          ))}
-   
-      </div>
-    )
-  }
+        ))}
+    </Stack>
+  )
+}
 
-  

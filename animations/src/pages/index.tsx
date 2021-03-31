@@ -2,6 +2,7 @@
 //   useSession, signIn, signOut
 // } from 'next-auth/client'
 import StoreList from '../components/StoreList';
+import Search from '../components/Search';
 import prisma from '../../lib/prisma'
 
 
@@ -30,7 +31,9 @@ export default function Component(props) {
   return (
     <div className="container">
       <h1>My stores</h1>
+      
       <StoreList stores={props.stores} />
+
 
     </div>
 
