@@ -16,7 +16,7 @@ export default function StoreList({stores}) {
 
         {stores.map(e =>(
 
-          <Link as={`/stores/${e.name}`} href="/stores/[id]">
+          <Link as={`/stores/${e.id}`} href="/stores/[id]">
             
             <a>
 

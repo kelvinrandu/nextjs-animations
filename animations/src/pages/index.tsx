@@ -1,31 +1,20 @@
 // import {
 //   useSession, signIn, signOut
 // } from 'next-auth/client'
-import StoreList from '../components/StoreList';
-import Search from '../components/Search';
-import prisma from '../../lib/prisma'
+import StoreList from '../components/StoreList'
+import Search from '../components/Search'
 
 
 export async function getStaticProps() {
-
-  // Returns an object or null
-  const stores: object | null = await prisma.store.findMany({
-    where: {
-      author: { email: 'randukelvin@gmail.com' },
-    }, 
- 
-    select: {
-      id:true,
-      name:true,
- 
-    },
-  })
+  const res = await fetch('http://localhost:3000/api/stores')
+  const stores = await res.json()
   
   return {
     props : { stores}
   }
   
 }
+
 export default function Component(props) {
   
   return (
