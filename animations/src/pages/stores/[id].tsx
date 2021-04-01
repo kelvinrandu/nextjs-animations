@@ -24,16 +24,14 @@ export async function getStaticProps({params}) {
 }
 
 
-export default function Store() {
-    const router = useRouter();
-    
-
-
- 
+export default function Store(props) {
+    const router = useRouter()
+    const date =   props.store.createdAt
     
     return (
       <div>
         <h1>store details</h1>
+        {props.store.name} since {props.store.createdAt}
    
       </div>
     )
