@@ -60,6 +60,9 @@ model Store {
 model Item {
   id      Int    @id @default(autoincrement())
   name    String
+  quantity String
+  price    Int
+  threshold Int
   storeId Int
   store   Store  @relation(fields: [storeId], references: [id])
 }

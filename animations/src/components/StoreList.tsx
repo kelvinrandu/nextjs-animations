@@ -22,7 +22,7 @@ export default function StoreList({stores}) {
 
             <Feature
               name={e.name}
-              location="Diani"
+              location={e.location}
             />
           
             </a>

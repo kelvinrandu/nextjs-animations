@@ -10,11 +10,14 @@ export default async function getAllStores(req: NextApiRequest, res: NextApiResp
         select: {
           id:true,
           name:true,
+          location:true,
      
         },
+       
       })
 
       res.json(stores)
+      console.log(stores)
     
 
 }

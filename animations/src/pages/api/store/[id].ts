@@ -8,8 +8,18 @@ export default async function getStoreById(req: NextApiRequest, res: NextApiResp
         where: {
           id: Number(id) ,
         },
+  
+      })
+      const getUser = await prisma.user.findUnique({
+        where: {
+          id: Number(id),
+        },
+        include: {
+          items: true,
+        },
       })
 
     res.json(store);
+    res.json(getUser);
 
 }
