@@ -21,7 +21,6 @@ export default function Component(props) {
     <div className="container">
       <Search />
 
-
       <h1>My stores</h1>
 
       <StoreList stores={props.stores} />

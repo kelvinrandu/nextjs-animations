@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import ItemList from '../../components/ItemList'
 
 
 export async function getStaticPaths() {
@@ -13,10 +14,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const res = await fetch(`http://localhost:3000/api/store/${params.id}`)
- 
+
+  const res = await fetch(`http://localhost:3000/api/store/${params.id}`) 
   const store = await res.json()
-  console.log(store)
   
   return {
     props : { store}
@@ -33,12 +33,8 @@ export default function Store(props) {
         {props.store.name} since {props.store.createdAt}
 
         <h1>items</h1>
-
-        {props.store.items.map(e =>(
-          <div>{e.name}. ksh{e.price}</div>
-
-        ))}
-              
+           <ItemList items={props.store.items} />
+             
       </div>
     )
   }
