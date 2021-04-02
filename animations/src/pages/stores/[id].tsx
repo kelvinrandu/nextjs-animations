@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
   const res = await fetch(`http://localhost:3000/api/store/${params.id}`)
+ 
   const store = await res.json()
   console.log(store)
   
@@ -23,16 +24,21 @@ export async function getStaticProps({params}) {
   
 }
 
-
 export default function Store(props) {
     const router = useRouter()
-    const date =   props.store.createdAt
     
     return (
       <div>
         <h1>store details</h1>
         {props.store.name} since {props.store.createdAt}
-   
+
+        <h1>items</h1>
+
+        {props.store.items.map(e =>(
+          <div>{e.name}. ksh{e.price}</div>
+
+        ))}
+              
       </div>
     )
   }

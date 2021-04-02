@@ -9,7 +9,6 @@ export default function getAllItems(req: NextApiRequest, res: NextApiResponse){
         select: {
           id:true,
           name:true,
-          location:true,
      
         },
       })
