@@ -14,7 +14,7 @@ export default function getAllItems(req: NextApiRequest, res: NextApiResponse){
       })
 
       res.json(stores)
-      console.log(stores)
+    
     
 
 }
