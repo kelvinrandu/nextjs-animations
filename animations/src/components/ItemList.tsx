@@ -1,12 +1,12 @@
-import { Box, Stack,Heading,Text } from "@chakra-ui/layout"
+import { Box, Stack,Heading,Text,Flex } from "@chakra-ui/layout"
 import { Button } from "@chakra-ui/react"
 
 function Feature({ name, price, quantity }) {
   return (
-    <Box p={5} shadow="md" borderWidth="1px" w="50%"  >
+    <Box p={5} shadow="md" borderWidth="1px" w="40%"  >
       <Heading fontSize="xl">{name}</Heading>
       <Text mt={4}>Ksh{price} </Text> <Text mt={4}>{quantity} in stock </Text>
-      <Button colorScheme="teal" variant="outline" alignSelf="right">
+      <Button colorScheme="teal" variant="outline" alignSelf="right" float="right">
          Add to cart
       </Button>
      
@@ -29,6 +29,8 @@ export default function ItemList({items}) {
 
         ))}
     </Stack>
+
+    
   )
 }
 
