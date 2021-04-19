@@ -1,17 +1,21 @@
+import { Editable, EditableInput, EditablePreview } from "@chakra-ui/react" 
+import { SearchIcon} from '@chakra-ui/icons'
+
+// The default icon size is 1em (16px)
+
+
 export default function Search() {
-    const stores =[
-      {name: 'cyberplus', email:'cyberplusdiani@gmail.com' , location: 'diani', created: 'diani'  },
-      {name: 'cyberplus', email:'cyberpluslikoni@gmail.com' , location: 'likoni', created: 'diani'  },
-      {name: 'cyberplus', email:'cyberplusmsambweni@gmail.com' , location: 'msambweni', created: 'diani'  }
-   
-    ]
+
   
       return (
         <div>
-                    <h1>search</h1>
-  
-        
-     
+        <Editable w="30%"  align="center" defaultValue="Search store...">
+       
+          <EditablePreview />
+          <EditableInput />
+          <SearchIcon/>
+        </Editable>
+       
         </div>
       )
     }

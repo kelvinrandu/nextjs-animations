@@ -1,30 +1,43 @@
-import Link from 'next/link';
+import React, { useState } from 'react'
+import { Box, Stack,Heading,Text } from "@chakra-ui/layout"
+import { Button } from "@chakra-ui/react"
 
-const items =[
-  {name: 'bamburi cement', quantity: 15 , buying_price: 5000, selling_price: 'diani'  },
-  {name: 'wheelbarrow', quantity: 25 , buying_price: 5000 , selling_price: 'diani'  },
-  {name: 'gumboots', quantity: 50 , buying_price: 5000 , selling_price: 'diani'  },
-  {name: 'bamburi cement', quantity: 15 , buying_price: 5000 , selling_price: 'diani'  }
+function Feature({ name, price, quantity }) {
+  const [count, setCount] = useState(0);
+  const total = count * price
+  console.log(count)
+  return (
+    <Box p={5} shadow="md" borderWidth="1px" w="40%"  >
+      <Heading fontSize="xl">{name}</Heading>
+      <Text mt={4}>Ksh{price} </Text> <Text mt={4}>{quantity} in stock </Text>
+      <Button colorScheme="teal" variant="outline" alignSelf="right" float="right"  onClick={() => setCount(count + 1)}>
+         Add to cart
+      </Button>
+      <Text mt={4}> total ksh {total} </Text>
+     
+     
+    </Box>
+  )
+}
 
-]
-export default function ItemList() {
- 
+export default function ItemList({items}) {
     
     return (
-      <div>
-        {items.map(e =>(
+      <Stack spacing={8}  >
 
-        <Link as={`/items/${e.name}`} href="/items/[id]">
-          <ul>
-          <a>
-          {e.name} {e.quantity}
-          </a>
-          </ul>
-        </Link>
+        {items.map(e =>(
+            <Feature
+              name={e.name}
+              price={e.price}
+              quantity={e.quantity}
+            />
+     
 
         ))}
-   
-      </div>
-    )
-  }
-  
+        
+    </Stack>
+
+    
+  )
+}
+

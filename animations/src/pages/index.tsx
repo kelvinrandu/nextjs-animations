@@ -1,17 +1,34 @@
-import {
-  useSession, signIn, signOut
-} from 'next-auth/client'
+import { react }   from 'react'
+// import {
+//   useSession, signIn, signOut
+// } from 'next-auth/client'
+import StoreList from '../components/StoreList'
+import Search from '../components/Search'
 
-export default function Component() {
-  const [ session, loading ] = useSession()
-  if(session) {
-    return <>
-      Signed in as {session.user.email} <br/>
-      <button onClick={() => signOut()}>Sign out</button>
-    </>
+
+export async function getStaticProps() {
+  const res = await fetch('http://localhost:3000/api/stores')
+  const stores = await res.json()
+  
+  return {
+    props : { stores}
   }
-  return <>
-    Not signed in <br/>
-    <button onClick={() => signIn()}>Sign in</button>
-  </>
+  
 }
+
+export default function Component(props) {
+  
+  return (
+    <div className="container">
+      <Search />
+
+      <h1>My stores</h1>
+
+      <StoreList stores={props.stores} />
+
+
+    </div>
+
+  )
+}
+
