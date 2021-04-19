@@ -13,7 +13,8 @@ function Feature({ name, price, quantity }) {
       <Button colorScheme="teal" variant="outline" alignSelf="right" float="right"  onClick={() => setCount(count + 1)}>
          Add to cart
       </Button>
-     {total}
+      <Text mt={4}> total ksh {total} </Text>
+     
      
     </Box>
   )
