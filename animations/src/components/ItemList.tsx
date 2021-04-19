@@ -4,6 +4,7 @@ import { Button } from "@chakra-ui/react"
 
 function Feature({ name, price, quantity }) {
   const [count, setCount] = useState(0);
+  const total = count * price
   console.log(count)
   return (
     <Box p={5} shadow="md" borderWidth="1px" w="40%"  >
@@ -12,6 +13,7 @@ function Feature({ name, price, quantity }) {
       <Button colorScheme="teal" variant="outline" alignSelf="right" float="right"  onClick={() => setCount(count + 1)}>
          Add to cart
       </Button>
+     {total}
      
     </Box>
   )
@@ -31,6 +33,7 @@ export default function ItemList({items}) {
      
 
         ))}
+        
     </Stack>
 
     

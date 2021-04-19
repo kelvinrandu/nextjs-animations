@@ -17,7 +17,7 @@ export default async function getAllStores(req: NextApiRequest, res: NextApiResp
       })
 
       res.json(stores)
-      console.log(stores)
+     
     
 
 }

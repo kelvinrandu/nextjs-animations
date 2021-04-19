@@ -1,5 +1,6 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 import ItemList from '../../components/ItemList'
+import { Grid, GridItem } from "@chakra-ui/react"
 
 
 export async function getStaticPaths() {
@@ -32,8 +33,15 @@ export default function Store(props) {
         <h1>store details</h1>
         {props.store.name} since {props.store.createdAt}
 
-        <h1>items</h1>
+
+
+     <Grid templateColumns="repeat(5, 1fr)" gap={4}>
+    <GridItem colSpan={2} h="10" bg="tomato" >
+    <h1>items</h1>
            <ItemList items={props.store.items} />
+    </GridItem  >
+    <GridItem colStart={4} colEnd={6} h="10" bg="papayawhip" />
+    </Grid>
              
       </div>
     )
