@@ -1,5 +1,4 @@
 import { PrismaClient } from "@prisma/client"
-const globalAny:any = global;
 
 let prisma: PrismaClient
 
