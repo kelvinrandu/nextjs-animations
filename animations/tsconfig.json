@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "lib/prisma.js"  ],
+, "lib/prisma.js", "src/components/ItemList.js"  ],
   "exclude": [
     "node_modules"
   ]
