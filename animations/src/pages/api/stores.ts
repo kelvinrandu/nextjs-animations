@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse} from 'next';
+import { NextApiRequest, NextApiResponse } from 'next'
 import prisma from '../../../lib/prisma'
 
 export default async function getAllStores(req: NextApiRequest, res: NextApiResponse){
@@ -10,14 +10,11 @@ export default async function getAllStores(req: NextApiRequest, res: NextApiResp
         select: {
           id:true,
           name:true,
-          location:true,
-     
+          location:true,    
         },
        
       })
 
       res.json(stores)
      
-    
-
 }

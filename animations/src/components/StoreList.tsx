@@ -3,8 +3,18 @@ import Link from 'next/link'
 
 function Feature({ name, location, ...rest }) {
   return (
-    <Box p={5} shadow="md" borderWidth="1px" w="50%"  {...rest}>
-      <Heading fontSize="xl">{name}</Heading>
+    <Box 
+      p={5} 
+      shadow="md" 
+      borderWidth="1px" 
+      margin-left="20px"
+      w="50%"  
+      {...rest}>
+      <Heading
+       fontSize="xl"
+      >
+      {name}
+      </Heading>
       <Text mt={4}>{location} </Text>
     </Box>
   )
@@ -12,7 +22,9 @@ function Feature({ name, location, ...rest }) {
 
 export default function StoreList({stores}) {
   return (
-    <Stack spacing={8}  >
+    <Stack 
+      spacing={8}
+      >
 
         {stores.map(e =>(
 
